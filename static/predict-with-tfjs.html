@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Predict Language App
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <h1>Bangla Sign Language Detection Web Version</h1>
+    </head>
+    <body>
+        <main>
+            <div class="container mt-5">
+                <div class='row'>
+                    <input id="image-selector" class="form-control border-0" type="file">
+                </div>
+                <div class=col-6>
+                    <button id="predict-button" class="btn btn-dark flaot-right">Predict</button>
+                </div>
+
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <h2 class="ml-3">Predictions</h2>
+                    <ol id="prediction-list"></ol>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="ml-3">Image</h2>
+                    <canvas id ="c">
+                        <img id="selected-image" class="ml-3" src=""/>
+                    </canvas>
+                    
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-12">
+                    <h2 class="ml-3">Image</h2>
+                    <canvas id ="my-canvas">
+                        <img id="selected-image" class="ml-3" src=""/>
+                    </canvas>
+                    
+                </div>
+            </div> -->
+        </main>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js"></script>
+        <script src="sign_classes.js"></script>
+        <script src="predict.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    </body>
+</html>
